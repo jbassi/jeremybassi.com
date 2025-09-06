@@ -5,10 +5,9 @@ A simple, elegant personal website built with modern web technologies. Features 
 ## 🚀 Tech Stack
 
 - **Runtime**: [Bun](https://bun.sh/) - Fast JavaScript runtime and package manager
-- **Framework**: [React 18](https://reactjs.org/) - Component-based UI library
+- **Markup**: Vanilla HTML5 - Simple, fast, and accessible
 - **Styling**: [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
-- **Build Tool**: [Vite](https://vitejs.dev/) - Fast build tool and dev server
-- **Language**: [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+- **Build Tool**: TailwindCSS CLI - Direct CSS processing without bundler complexity
 
 ## 📦 Installation
 
@@ -48,12 +47,9 @@ bun run preview
 
 ## 📝 Scripts
 
-- `bun run dev` - Start development server
-- `bun run build` - Build for production
+- `bun run dev` - Start development server with TailwindCSS watch
+- `bun run build` - Build for production (static files)
 - `bun run preview` - Preview production build
-- `bun run lint` - Run ESLint
-- `bun run lint:fix` - Fix ESLint errors automatically
-- `bun run format` - Format code with Prettier
 
 ## 🎨 Design Features
 
@@ -94,45 +90,9 @@ Font sizes and spacing can be adjusted in the Tailwind config or by modifying th
 ### Content
 Update the content in `src/components/App.tsx` to reflect your personal information, work experience, and contact details.
 
-## 📁 Project Structure
-
-```
-jeremybassi.com/
-├── public/
-│   ├── favicon.svg
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   └── App.tsx
-│   ├── styles/
-│   │   └── index.css
-│   ├── main.tsx
-│   └── vite-env.d.ts
-├── package.json
-├── tailwind.config.js
-├── vite.config.ts
-├── tsconfig.json
-└── README.md
-```
-
 ## 🚀 Deployment
 
 This site can be deployed to any static hosting service:
-
-### Netlify
-1. Connect your GitHub repository
-2. Set build command: `bun run build`
-3. Set publish directory: `dist`
-
-### Vercel
-1. Import your GitHub repository
-2. Framework preset: Vite
-3. Build command: `bun run build`
-4. Output directory: `dist`
-
-### GitHub Pages
-1. Build the project: `bun run build`
-2. Deploy the `dist` folder to GitHub Pages
 
 ## 📄 License
 

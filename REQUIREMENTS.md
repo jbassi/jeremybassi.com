@@ -13,9 +13,7 @@ Based on the provided screenshots, the design should feature:
 
 ## Tech Stack
 - **Runtime**: Bun (JavaScript runtime and package manager)
-- **Framework**: React 18+ (Component-based UI)
 - **Styling**: TailwindCSS (Utility-first CSS framework)
-- **Build Tool**: Vite (Fast build tool and dev server)
 - **Language**: TypeScript (for type safety)
 
 ## Core Features
@@ -47,9 +45,7 @@ Based on the provided screenshots, the design should feature:
 ## Technical Requirements
 
 ### Dependencies
-- React 18+
 - TailwindCSS 3+
-- Vite 4+
 - TypeScript 5+
 - PostCSS (for TailwindCSS)
 - Autoprefixer (CSS vendor prefixes)
@@ -60,31 +56,9 @@ Based on the provided screenshots, the design should feature:
 - @types packages for TypeScript support
 
 ### Build & Deployment
-- Vite build system for production optimization
 - Static site generation for easy deployment
 - Modern browser support (ES6+)
 - Mobile-first responsive design
-
-## File Structure
-```
-jeremybassi.com/
-├── public/
-│   ├── favicon.ico
-│   └── index.html
-├── src/
-│   ├── components/
-│   │   └── App.tsx
-│   ├── styles/
-│   │   └── index.css
-│   ├── main.tsx
-│   └── vite-env.d.ts
-├── package.json
-├── tailwind.config.js
-├── vite.config.ts
-├── tsconfig.json
-├── postcss.config.js
-└── README.md
-```
 
 ## Content Strategy
 - Personal, conversational tone
@@ -108,7 +82,7 @@ jeremybassi.com/
 
 ## Development Workflow
 1. Set up development environment with Bun
-2. Configure build tools (Vite, TailwindCSS)
+2. Configure build tools (TailwindCSS)
 3. Create component structure
 4. Implement responsive design
 5. Add content and styling
