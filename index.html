@@ -25,7 +25,7 @@
               based in the Bay Area.
             </p>
             <p>
-              Currently working to make Bitcoin every day money at
+              Currently, I'm working to make Bitcoin every day money at
               <a href="https://block.xyz/" class="accent-link font-medium hover:underline" target="_blank" rel="noopener noreferrer">Block</a>, on
               <a href="https://squareup.com/" class="accent-link font-medium hover:underline" target="_blank" rel="noopener noreferrer">Square</a> and
               <a href="https://cash.app/" class="accent-link font-medium hover:underline" target="_blank" rel="noopener noreferrer">Cash App</a>.
@@ -138,10 +138,37 @@
       </div>
     </div>
 
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18,15 12,9 6,15"></polyline>
+      </svg>
+    </button>
+
     <script>
       // Smooth scrolling for any future internal links
       document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.style.scrollBehavior = 'smooth';
+        
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', function() {
+          if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('show');
+          } else {
+            scrollToTopBtn.classList.remove('show');
+          }
+        });
+        
+        // Scroll to top when button is clicked
+        scrollToTopBtn.addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
       });
     </script>
   </body>
