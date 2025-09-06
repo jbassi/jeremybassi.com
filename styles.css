@@ -598,7 +598,7 @@ body{
 
 .accent-link{
   --tw-text-opacity: 1;
-  color: rgb(240 104 26 / var(--tw-text-opacity, 1));
+  color: rgb(132 204 22 / var(--tw-text-opacity, 1));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
@@ -606,7 +606,7 @@ body{
 
 .accent-link:hover{
   --tw-text-opacity: 1;
-  color: rgb(225 79 16 / var(--tw-text-opacity, 1));
+  color: rgb(101 163 13 / var(--tw-text-opacity, 1));
 }
 
 .section-spacing{
