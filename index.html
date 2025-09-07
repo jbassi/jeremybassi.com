@@ -9,18 +9,18 @@
     <title>Jeremy Bassi</title>
     <link rel="stylesheet" href="./styles.css">
   </head>
-  <body class="font-sans text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-900">
-    <div class="min-h-screen bg-white dark:bg-gray-950">
+  <body class="font-sans text-primary bg-primary">
+    <div class="min-h-screen bg-container">
       <!-- Dark Mode Toggle -->
-      <div id="themeToggleContainer" class="fixed top-6 right-8 z-10 transition-all duration-300 opacity-100 visible translate-y-0">
-        <label class="inline-flex items-center cursor-pointer">
+      <div id="themeToggleContainer" class="theme-toggle-container">
+        <label class="theme-toggle-label">
           <input type="checkbox" id="theme-toggle" class="sr-only peer">
           <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-lime-300 dark:peer-focus:ring-lime-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-lime-500 dark:peer-checked:bg-lime-500"></div>
           <span class="sr-only">Toggle dark mode</span>
         </label>
       </div>
 
-      <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+      <div class="main-container">
         <!-- Hero Section -->
         <section class="section-spacing">
           <h1 class="section-heading">
@@ -68,36 +68,36 @@
           <h2 class="section-heading">
             Work
           </h2>
-          <div class="space-y-12">
+          <div class="space-y-large">
             <!-- Current Role -->
-            <div class="grid md:grid-cols-4 gap-6">
-              <div class="md:col-span-1">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Current</h3>
-                <p class="text-base text-gray-600 dark:text-gray-400">2020 - Present</p>
+            <div class="work-grid">
+              <div class="work-grid-left">
+                <h3 class="work-title">Current</h3>
+                <p class="work-date">2020 - Present</p>
               </div>
-              <div class="md:col-span-3">
-                <h4 class="text-xl font-semibold mb-2 dark:text-gray-100">Senior iOS Engineer</h4>
-                <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">
+              <div class="work-grid-right">
+                <h4 class="work-role">Senior iOS Engineer</h4>
+                <p class="work-company">
                   <a href="https://block.xyz/" class="accent-link hover:underline" target="_blank" rel="noopener noreferrer">Block</a>
                 </p>
-                <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p class="work-description">
                   Working to make Bitcoin everyday money on Square and Cash App.
                 </p>
               </div>
             </div>
 
             <!-- Previous Roles -->
-            <div class="grid md:grid-cols-4 gap-6">
-              <div class="md:col-span-1">
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Previous</h3>
-                <p class="text-base text-gray-600 dark:text-gray-400">2016 - 2020</p>
+            <div class="work-grid">
+              <div class="work-grid-left">
+                <h3 class="work-title">Previous</h3>
+                <p class="work-date">2016 - 2020</p>
               </div>
-              <div class="md:col-span-3">
-                <h4 class="text-xl font-semibold mb-2 dark:text-gray-100">iOS Engineer</h4>
-                <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">
+              <div class="work-grid-right">
+                <h4 class="work-role">iOS Engineer</h4>
+                <p class="work-company">
                   <a href="https://workday.com/" class="accent-link hover:underline" target="_blank" rel="noopener noreferrer">Workday</a>
                 </p>
-                <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p class="work-description">
                   Worked on the Workday iOS app.
                 </p>
               </div>
@@ -115,24 +115,24 @@
               Interested in working together or just want to say hello? 
               Drop me a line and let's start a conversation.
             </p>
-            <div class="space-y-4">
+            <div class="space-y-medium">
               <div>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Email</h3>
+                <h3 class="contact-section-title">Email</h3>
                 <p>
-                  <a href="mailto:TODO (email)" class="accent-link hover:underline text-xl">TODO (email)</a>
+                  <a href="mailto:TODO (email)" class="contact-link-large">TODO (email)</a>
                 </p>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Social</h3>
-                <div class="space-y-2">
+                <h3 class="contact-section-title">Social</h3>
+                <div class="space-y-small">
                   <p>
-                    <a href="https://x.com/jeremybassi" class="accent-link hover:underline text-xl" target="_blank" rel="noopener noreferrer">X</a>
+                    <a href="https://x.com/jeremybassi" class="contact-link-large" target="_blank" rel="noopener noreferrer">X</a>
                   </p>
                   <p>
-                    <a href="https://linkedin.com/in/jeremybassi" class="accent-link hover:underline text-xl" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://linkedin.com/in/jeremybassi" class="contact-link-large" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                   </p>
                   <p>
-                    <a href="https://github.com/jbassi" class="accent-link hover:underline text-xl" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://github.com/jbassi" class="contact-link-large" target="_blank" rel="noopener noreferrer">GitHub</a>
                   </p>
                 </div>
               </div>
@@ -141,8 +141,8 @@
         </section>
 
         <!-- Footer -->
-        <footer class="pt-12 border-t border-gray-200 dark:border-gray-700">
-          <p class="text-sm text-gray-500 dark:text-gray-400">
+        <footer class="footer">
+          <p class="footer-text">
             © 2025 Jeremy Bassi. All rights reserved.
           </p>
         </footer>
