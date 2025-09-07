@@ -9,8 +9,17 @@
     <title>Jeremy Bassi</title>
     <link rel="stylesheet" href="./styles.css">
   </head>
-  <body class="font-sans text-gray-900 bg-white">
-    <div class="min-h-screen bg-white">
+  <body class="font-sans text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-900">
+    <div class="min-h-screen bg-white dark:bg-gray-950">
+      <!-- Dark Mode Toggle -->
+      <div id="themeToggleContainer" class="fixed top-6 right-8 z-10 transition-all duration-300 opacity-100 visible translate-y-0">
+        <label class="inline-flex items-center cursor-pointer">
+          <input type="checkbox" id="theme-toggle" class="sr-only peer">
+          <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-lime-300 dark:peer-focus:ring-lime-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-lime-500 dark:peer-checked:bg-lime-500"></div>
+          <span class="sr-only">Toggle dark mode</span>
+        </label>
+      </div>
+
       <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
         <!-- Hero Section -->
         <section class="section-spacing">
@@ -63,15 +72,15 @@
             <!-- Current Role -->
             <div class="grid md:grid-cols-4 gap-6">
               <div class="md:col-span-1">
-                <h3 class="text-lg font-semibold text-gray-900">Current</h3>
-                <p class="text-base text-gray-600">2020 - Present</p>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Current</h3>
+                <p class="text-base text-gray-600 dark:text-gray-400">2020 - Present</p>
               </div>
               <div class="md:col-span-3">
-                <h4 class="text-xl font-semibold mb-2">Senior iOS Engineer</h4>
-                <p class="text-lg text-gray-600 mb-4">
+                <h4 class="text-xl font-semibold mb-2 dark:text-gray-100">Senior iOS Engineer</h4>
+                <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">
                   <a href="https://block.xyz/" class="accent-link hover:underline" target="_blank" rel="noopener noreferrer">Block</a>
                 </p>
-                <p class="text-base text-gray-700 leading-relaxed">
+                <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                   Working to make Bitcoin everyday money on Square and Cash App.
                 </p>
               </div>
@@ -80,15 +89,15 @@
             <!-- Previous Roles -->
             <div class="grid md:grid-cols-4 gap-6">
               <div class="md:col-span-1">
-                <h3 class="text-lg font-semibold text-gray-900">Previous</h3>
-                <p class="text-base text-gray-600">2016 - 2020</p>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100">Previous</h3>
+                <p class="text-base text-gray-600 dark:text-gray-400">2016 - 2020</p>
               </div>
               <div class="md:col-span-3">
-                <h4 class="text-xl font-semibold mb-2">iOS Engineer</h4>
-                <p class="text-lg text-gray-600 mb-4">
+                <h4 class="text-xl font-semibold mb-2 dark:text-gray-100">iOS Engineer</h4>
+                <p class="text-lg text-gray-600 dark:text-gray-400 mb-4">
                   <a href="https://workday.com/" class="accent-link hover:underline" target="_blank" rel="noopener noreferrer">Workday</a>
                 </p>
-                <p class="text-base text-gray-700 leading-relaxed">
+                <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                   Worked on the Workday iOS app.
                 </p>
               </div>
@@ -108,13 +117,13 @@
             </p>
             <div class="space-y-4">
               <div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Email</h3>
                 <p>
                   <a href="mailto:TODO (email)" class="accent-link hover:underline text-xl">TODO (email)</a>
                 </p>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-gray-900 mb-2">Social</h3>
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">Social</h3>
                 <div class="space-y-2">
                   <p>
                     <a href="https://x.com/jeremybassi" class="accent-link hover:underline text-xl" target="_blank" rel="noopener noreferrer">X</a>
@@ -132,8 +141,8 @@
         </section>
 
         <!-- Footer -->
-        <footer class="pt-12 border-t border-gray-200">
-          <p class="text-sm text-gray-500">
+        <footer class="pt-12 border-t border-gray-200 dark:border-gray-700">
+          <p class="text-sm text-gray-500 dark:text-gray-400">
             © 2025 Jeremy Bassi. All rights reserved.
           </p>
         </footer>
@@ -148,19 +157,59 @@
     </button>
 
     <script>
+      // Theme toggle functionality
+      function setTheme(theme) {
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('color-theme', 'dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('color-theme', 'light');
+        }
+      }
+
+      // Initialize theme on page load
+      (function() {
+        const storedTheme = localStorage.getItem('color-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const currentTheme = storedTheme ? storedTheme : (prefersDark ? 'dark' : 'light');
+        setTheme(currentTheme);
+        
+        // Set toggle state after DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+          const themeToggle = document.getElementById('theme-toggle');
+          if (themeToggle) {
+            themeToggle.checked = currentTheme === 'dark';
+            
+            // Add event listener for toggle changes
+            themeToggle.addEventListener('change', function() {
+              const newTheme = this.checked ? 'dark' : 'light';
+              setTheme(newTheme);
+            });
+          }
+        });
+      })();
+
       // Smooth scrolling for any future internal links
       document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.style.scrollBehavior = 'smooth';
         
         // Scroll to top functionality
         const scrollToTopBtn = document.getElementById('scrollToTop');
+        const themeToggleContainer = document.getElementById('themeToggleContainer');
         
-        // Show/hide button based on scroll position
+        // Show/hide buttons based on scroll position
         window.addEventListener('scroll', function() {
           if (window.pageYOffset > 300) {
             scrollToTopBtn.classList.add('show');
+            // Hide theme toggle when scrolled down
+            themeToggleContainer.classList.add('opacity-0', 'invisible', '-translate-y-5');
+            themeToggleContainer.classList.remove('opacity-100', 'visible', 'translate-y-0');
           } else {
             scrollToTopBtn.classList.remove('show');
+            // Show theme toggle when at top
+            themeToggleContainer.classList.remove('opacity-0', 'invisible', '-translate-y-5');
+            themeToggleContainer.classList.add('opacity-100', 'visible', 'translate-y-0');
           }
         });
         
