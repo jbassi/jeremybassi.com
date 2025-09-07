@@ -60,7 +60,7 @@
 
   /* Background Components */
   .bg-primary {
-    @apply bg-white dark:bg-gray-900;
+    @apply bg-white dark:bg-gray-950;
   }
   
   .bg-container {
