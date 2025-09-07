@@ -130,6 +130,29 @@
     @apply accent-link hover:underline text-xl;
   }
 
+  /* Contact Content Layout */
+  .contact-paragraph-container {
+    @apply large-text font-light space-y-8;
+  }
+
+  /* Contact Grid Layout */
+  .contact-grid {
+    @apply grid md:grid-cols-3 gap-6 items-start;
+  }
+  
+  .contact-content {
+    @apply md:col-span-2;
+  }
+  
+  .contact-image {
+    @apply md:col-span-1 flex justify-center md:justify-start md:pl-4;
+  }
+  
+  /* Profile Image Components */
+  .profile-image {
+    @apply w-48 h-48 object-cover rounded-lg;
+  }
+
   /* Theme Toggle */
   .theme-toggle-container {
     @apply fixed top-6 right-8 z-10 transition-all duration-300 opacity-100 visible translate-y-0;
