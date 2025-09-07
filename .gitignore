@@ -32,3 +32,6 @@ dist-ssr
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Generated CSS (built from src/styles/index.css)
+styles.css
