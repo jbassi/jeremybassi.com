@@ -8,9 +8,7 @@
     <meta name="author" content="Jeremy Bassi" />
     
     <!-- Status bar theming for mobile devices -->
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#030712" media="(prefers-color-scheme: dark)" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Jeremy Bassi</title>
     <link rel="stylesheet" href="./styles.css">
@@ -175,26 +173,10 @@
         if (theme === 'dark') {
           document.documentElement.classList.add('dark');
           localStorage.setItem('color-theme', 'dark');
-          // Update status bar color for dark mode
-          updateStatusBarColor('#030712');
         } else {
           document.documentElement.classList.remove('dark');
           localStorage.setItem('color-theme', 'light');
-          // Update status bar color for light mode
-          updateStatusBarColor('#ffffff');
         }
-      }
-
-      // Update status bar color for mobile devices
-      function updateStatusBarColor(color) {
-        // Update theme-color meta tag
-        let themeColorMeta = document.querySelector('meta[name="theme-color"]:not([media])');
-        if (!themeColorMeta) {
-          themeColorMeta = document.createElement('meta');
-          themeColorMeta.name = 'theme-color';
-          document.head.appendChild(themeColorMeta);
-        }
-        themeColorMeta.content = color;
       }
 
       // Initialize theme on page load
