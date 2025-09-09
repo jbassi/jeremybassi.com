@@ -92,7 +92,7 @@ Update the content in `src/components/App.tsx` to reflect your personal informat
 
 ## 🚀 Deployment
 
-This site can be deployed to any static hosting service:
+This site can be deployed to any static hosting service.
 
 ## 📄 License
 

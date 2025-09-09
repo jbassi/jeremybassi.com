@@ -163,6 +163,32 @@
     @apply inline-flex items-center cursor-pointer;
   }
   
+  /* Remove focus outline from theme toggle */
+  .theme-toggle-label:focus-within {
+    @apply outline-none;
+  }
+  
+  .theme-toggle-label input:focus {
+    @apply outline-none ring-0 !ring-0 !ring-transparent;
+  }
+  
+  .theme-toggle-label input:focus-visible {
+    @apply outline-none ring-0 !ring-0 !ring-transparent;
+  }
+  
+  .theme-toggle-label div:focus {
+    @apply outline-none;
+  }
+  
+  /* Override Tailwind's peer-focus styles specifically for theme toggle */
+  #theme-toggle:focus + div {
+    @apply !ring-0 !ring-transparent;
+  }
+  
+  #theme-toggle:focus-visible + div {
+    @apply !ring-0 !ring-transparent;
+  }
+  
   /* Scroll to Top Button */
   .scroll-to-top {
     @apply fixed bottom-8 right-8 w-12 h-12 bg-lime-500/90 hover:bg-lime-600/90 backdrop-blur-sm text-white border border-lime-400/50 rounded-full flex items-center justify-center cursor-pointer opacity-0 invisible translate-y-5 transition-all duration-300 shadow-lg z-50;
