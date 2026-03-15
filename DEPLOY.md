@@ -21,7 +21,9 @@ bun run preview    # Serves dist/ folder on port 3000
 dist/
 ├── index.html     # Your website
 ├── styles.css     # Minified TailwindCSS
-└── favicon.svg    # Icon
+└── assets/
+    ├── favicon.svg    # Icon
+    └── me.jpg         # Profile photo
 ```
 
 ## 🚀 Debian VM Deployment
@@ -176,7 +178,9 @@ sudo ufw enable
 /var/www/html/
 ├── index.html      # Your website
 ├── styles.css      # Minified TailwindCSS (~5KB)
-└── favicon.svg     # Icon
+└── assets/
+    ├── favicon.svg     # Icon
+    └── me.jpg          # Profile photo
 ```
 
 ## 🎯 Why This Approach is Perfect for Debian:

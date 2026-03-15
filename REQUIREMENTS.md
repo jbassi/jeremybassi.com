@@ -14,7 +14,7 @@ Based on the provided screenshots, the design should feature:
 ## Tech Stack
 - **Runtime**: Bun (JavaScript runtime and package manager)
 - **Styling**: TailwindCSS (Utility-first CSS framework)
-- **Language**: TypeScript (for type safety)
+- **Language**: Vanilla HTML5, CSS, and JavaScript
 
 ## Core Features
 
@@ -46,14 +46,11 @@ Based on the provided screenshots, the design should feature:
 
 ### Dependencies
 - TailwindCSS 3+
-- TypeScript 5+
 - PostCSS (for TailwindCSS)
 - Autoprefixer (CSS vendor prefixes)
 
 ### Development Dependencies
-- ESLint (code linting)
-- Prettier (code formatting)
-- @types packages for TypeScript support
+- Concurrently (for parallel dev server and CSS watch)
 
 ### Build & Deployment
 - Static site generation for easy deployment
@@ -90,7 +87,6 @@ Based on the provided screenshots, the design should feature:
 7. Optimize for production deployment
 
 ## Future Enhancements (Optional)
-- Dark mode toggle
 - Animation effects
 - Blog section
 - Portfolio gallery

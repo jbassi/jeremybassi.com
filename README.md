@@ -88,7 +88,7 @@ colors: {
 Font sizes and spacing can be adjusted in the Tailwind config or by modifying the CSS classes in `src/styles/index.css`.
 
 ### Content
-Update the content in `src/components/App.tsx` to reflect your personal information, work experience, and contact details.
+Update the content in `index.html` to reflect your personal information, work experience, and contact details.
 
 ## 🚀 Deployment
 
